@@ -3,7 +3,7 @@ from Crypto.Random import get_random_bytes
 from Crypto.Util.Padding import pad, unpad
 
 def encrypt_aes(inp, out):
-    key = get_random_bytes(16)  # AES-128
+    key = get_random_bytes(16)
     cipher = AES.new(key, AES.MODE_CBC)
     
     with open(inp, 'rb') as infile:
